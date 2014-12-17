@@ -24,6 +24,15 @@
   <strong>Genre:</strong>
   <%= @song.genre_id %>
 </p>
+<h3>Add New Comment</h3>
+Form
+
+<h3>Comments Added</h3>
+<% @song.comments.each do |comment| %>
+  <%= comment.description %></br>
+  Added <%= time_ago_in_words(comment.created_at) %> ago</br>
+  By <%= link_to comment.user.try(:name), user_path(comment.user) %></br></br>
+<% end %>
 
 <%= link_to 'Edit', edit_song_path(@song) %> |
 <%= link_to 'Back', songs_path %>
