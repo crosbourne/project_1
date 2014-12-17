@@ -28,10 +28,6 @@
     <%= f.number_field :rating %>
   </div>
   <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
      <%= f.collection_select(:genre_id, Genre.all, :id, :name) %><br>
   <div class="actions">
     <%= f.submit %>

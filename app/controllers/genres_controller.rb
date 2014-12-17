@@ -24,7 +24,7 @@ class GenresController < ApplicationController
   # POST /genres
   # POST /genres.json
   def create
-    @genre = Genre.new(genre_params)
+    @genre = current_user.genres.new(genre_params)
 
     respond_to do |format|
       if @genre.save
