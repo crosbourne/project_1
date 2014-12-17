@@ -1,0 +1,18 @@
+<h1>Splash</h1>
+
+<nav>
+  <ul>
+    <li>
+      <%= link_to 'HOME', root_path %>
+    </li>
+    <li>
+      <%= link_to 'MUSIC', search_index_path %>
+    </li>
+    <li>
+      <%= link_to 'MY MUSIC', user_path(current_user) %>
+    </li>
+    <li>
+      <%= link_to 'ABOUT US', about_index_path %>
+    </li>
+  </ul>
+</nav>
