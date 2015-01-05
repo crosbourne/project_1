@@ -5,6 +5,8 @@ gem 'cancancan'
 gem 'carrierwave', '0.9.0'
 gem 'rmagick'
 gem 'fog', '~> 1.3.1'
+gem 'acts_as_commentable'
+gem 'foundation-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record

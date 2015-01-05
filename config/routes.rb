@@ -2,14 +2,19 @@ Rails.application.routes.draw do
   root 'home#index'
 
   devise_for :users
-  resources :users 
+  resources :users, only: [:show, :index, :destroy] 
   
   resources :genres
-  resources :comments
-  resources :songs
+  resources :albums
+  
+  resources :songs do
+    resources :comments
+  end
+  
   resources :splash
   resources :about
   resources :search
+
 
 
 end

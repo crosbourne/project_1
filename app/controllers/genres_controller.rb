@@ -1,5 +1,6 @@
 class GenresController < ApplicationController
   before_action :set_genre, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
 
   # GET /genres
   # GET /genres.json
@@ -24,7 +25,7 @@ class GenresController < ApplicationController
   # POST /genres
   # POST /genres.json
   def create
-    @genre = current_user.genres.new(genre_params)
+    @genre = Genre.new(genre_params)
 
     respond_to do |format|
       if @genre.save

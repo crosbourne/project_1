@@ -1,38 +1,49 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <!-- <strong>Name:</strong> -->
   <%= @song.name %>
 </p>
 
 <p>
-  <strong>Image:</strong>
+<!--   <strong>Image:</strong> -->
   <%= link_to image_tag(@song.song_image.thumb.url), @song.song_image.detail.url %>
 </p>
 
 <p>
-  <strong>Rating:</strong>
-  <%= @song.rating %>
+  <!-- <strong>Rating:</strong> -->
+  <%#= @song.rating %>
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @song.user_id %>
+ <!--  <strong>User:</strong> -->
+  <%= @song.user.try(:email) %>
 </p>
 
 <p>
-  <strong>Genre:</strong>
-  <%= @song.genre_id %>
+ <!--  <strong>Genre:</strong> -->
+  <%= @song.genre.try(:name) %>
 </p>
-<h3>Add New Comment</h3>
-Form
 
-<h3>Comments Added</h3>
-<% @song.comments.each do |comment| %>
-  <%= comment.description %></br>
-  Added <%= time_ago_in_words(comment.created_at) %> ago</br>
-  By <%= link_to comment.user.try(:name), user_path(comment.user) %></br></br>
-<% end %>
+<p>
+<!--   <strong>Song:</strong> -->
+  <%#= @song.song_upload.url.inspect %>
+  <audio controls="controls" src="<%= @song.song_upload.url %>" />
+</p>
 
-<%= link_to 'Edit', edit_song_path(@song) %> |
+
+<% @song.comments.all.each do |comment| %>
+  <p><%= comment.comment %></p>
+  <p>Posted by: <%= comment.user.try :email %></p>
+  <hr>
+  <% end %>
+
+
+  <%= form_for [@song, @song.comments.new] do |f| %>
+  <%= render partial: 'comments/form', locals: { f: f } %>
+  <%= f.submit 'Add Comment!' %>
+  <% end %>
+
+
+<%= link_to 'Edit', edit_song_path(@song) if can? :edit, @song %> |
 <%= link_to 'Back', songs_path %>

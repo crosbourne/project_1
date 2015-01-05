@@ -1,5 +1,6 @@
 class SongsController < ApplicationController
   before_action :set_song, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
 
   # GET /songs
   # GET /songs.json
@@ -69,6 +70,6 @@ class SongsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def song_params
-      params.require(:song).permit(:name, :remote_song_image_url, :song_image, :remote_song_upload_url, :song_upload,:rating, :user_id, :genre_id)
+      params.require(:song).permit(:name, :song_image, :remote_song_upload_url, :song_upload,:rating, :user_id, :genre_id)
     end
 end

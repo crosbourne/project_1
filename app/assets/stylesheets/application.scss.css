@@ -1,0 +1,96 @@
+/*= require foundation */
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require foundation_and_overrides
+
+ */
+body {
+background-image: url("home background.jpg");
+background-size: cover;
+}
+
+p {
+  color: white;
+
+}
+
+.white_text {
+  color: white;
+}
+
+.user_background {
+background-size: cover;
+}
+
+.block-grid-item {
+ position: relative;
+}
+
+.block-grid-item .content {
+ position: absolute;
+ opacity: 0;
+ transition:1s;
+ top:60%;
+ left:10%;
+ font-family: verdana, arial, helvetica, sans-serif;
+ font-size: 60px;
+ color: white;
+}
+
+
+.block-grid-item .content a {
+ color: white;
+  }
+
+  .block-grid-item:hover .content {
+  opacity: 1;
+  
+  }
+
+  .block-grid-item .user_content {
+   position: absolute;
+   opacity: 0;
+   transition:1s;
+   top:60%;
+   font-family: verdana, arial, helvetica, sans-serif;
+   font-size: 30px;
+   color: white;
+  }
+
+
+  .block-grid-item .user_content a {
+   color: white;
+    }
+
+    .block-grid-item:hover .user_content {
+    opacity: 1;
+    
+    }
+
+ .top-bar {
+     background: black;
+     color: white;
+ }
+
+ .top-bar-section  {
+     background: black;
+     color: white;
+ }
+
+.button {
+display: center;
+
+}
+

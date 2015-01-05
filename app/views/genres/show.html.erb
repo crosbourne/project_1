@@ -1,14 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <!-- <strong>Name:</strong> -->
   <%= @genre.name %>
 </p>
 
 <p>
-  <strong>Image:</strong>
+  <!-- <strong>Image:</strong> -->
   <%= link_to image_tag(@genre.genre_image.thumb.url), @genre.genre_image.detail.url %>
 </p>
 
-<%= link_to 'Edit', edit_genre_path(@genre) %> |
+<div class="white_text">
+<% @genre.songs.each do |song| %>
+  <%= link_to song.name, song %><br><br>
+<% end %>
+</div>
+
+
+<%#= link_to 'Edit', edit_genre_path%> 
+<%= link_to 'Edit', edit_genre_path(@genre) if can? :edit, Genre %> |
 <%= link_to 'Back', genres_path %>
+

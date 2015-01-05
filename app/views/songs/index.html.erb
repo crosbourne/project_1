@@ -1,33 +1,34 @@
-<h1>Listing songs</h1>
+<h1>SONGS</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Image</th>
-      <th>Rating</th>
-      <th>User</th>
-      <th>Genre</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<nav>
+  <div class="row">
+    <div class="large-12 columns">
+      <ul class="large-block-grid-4">
+        <% @songs.each do |song| %>
 
-  <tbody>
-    <% @songs.each do |song| %>
-      <tr>
-        <td><%= song.name %></td>
-        <%= image_tag song.song_image.url %>
-        <td><%= song.rating %></td>
-        <td><%= song.user_id %></td>
-        <td><%= song.genre_id %></td>
-        <td><%= link_to 'Show', song %></td>
-        <td><%= link_to 'Edit', edit_song_path(song) %></td>
-        <td><%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <li class="block-grid-item"> 
+          <div class="user_content">
+         
+            <%=link_to song.name, song %>
 
-<br>
+            
+          </div>
 
-<%= link_to 'New Song', new_song_path %>
+
+          <%= link_to image_tag(song.song_image.url), song %>
+
+          <%= song.user.name %>
+          <%= song.genre.try(:name) %>
+          <%#= link_to 'Show', song %>
+          <%= link_to 'Edit', edit_song_path(song) if can? :edit, song %>
+          <%= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } if can?(:destroy, song)%>
+
+        <% end %>
+
+      </ul>
+    </div>
+  </div>  
+
+</nav>
+
+<%= link_to 'New Song', new_song_path if can? :create, Song %>

@@ -16,16 +16,20 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-      <%= f.label :remote_song_image_url %><br />
-      <%= f.text_field :remote_song_image_url %>
+      <%= f.label :song_image %><br />
+      <%= f.file_field :song_image %>
   </div>
   <div class="field">
   <%= f.label :remote_song_upload_url %><br />
   <%= f.text_field :remote_song_upload_url %>
   </div>
   <div class="field">
-    <%= f.label :rating %><br>
-    <%= f.number_field :rating %>
+  <%= f.label :song_upload %><br />
+  <%= f.file_field :song_upload %>
+  </div>
+  <div class="field">
+    <%#= f.label :rating %><br>
+    <%#= f.number_field :rating %>
   </div>
   <div class="field">
      <%= f.collection_select(:genre_id, Genre.all, :id, :name) %><br>

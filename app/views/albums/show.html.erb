@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <!-- <strong>Name:</strong> -->
+  <%= @album.name %>
+  <%= @album.songs %>
+</p>
+
+<p>
+<!--   <strong>Image:</strong> -->
+  <%= link_to image_tag(@album.album_image.thumb.url), @album.album_image.detail.url %>
+</p>
+
+<p>
+  <!-- <strong>Rating:</strong> -->
+  <%#= @album.rating %>
+</p>
+
+<p>
+ <!--  <strong>User:</strong> -->
+  <%#= @album.user.try(:email) %>
+</p>
+
+<p>
+ <!--  <strong>Genre:</strong> -->
+  <%#= @album.genre.try(:name) %>
+</p>
+
+<div class="white_text">
+<% @album.songs.each do |song| %>
+  <%= link_to song.name, song %><br><br>
+<% end %>
+</div>
+
+
+
+
+
+<%= link_to 'Edit', edit_album_path(@album) if can? :edit, @album %> |
+<%= link_to 'Back', albums_path %>

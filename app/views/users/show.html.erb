@@ -1,23 +1,35 @@
-<%= render 'layouts/nav' %>
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Email:</strong>
+ <!--  <strong>Email:</strong> -->
   <%= @user.email %>
+
 </p>
 <p>
-  <strong>Name:</strong>
+<!--   <strong>Name:</strong> -->
   <%= @user.name %>
 </p>
 
 <p>
-  <strong>Image:</strong>
+ <!--  <strong>Image:</strong> -->
   <%= link_to image_tag(@user.user_avatar.thumb.url), @user.user_avatar.detail.url %>
 </p>
 <p>
-<strong>Background:</strong>
-<%= image_tag @user.user_background.url %>
+<!-- <strong>Background:</strong> -->
+<div class="user_background"><%= image_tag @user.user_background.url %></div>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
+<p>
+<strong>Comments:</strong>
+<%= @user.description %>
+</p>
+
+<div class="white_text">
+<% @user.songs.each do |song| %>
+  <%= link_to song.try(:name), song  %><br><br>
+<% end %>
+</div>
+
+
+
 <%= link_to 'Back', users_path %>

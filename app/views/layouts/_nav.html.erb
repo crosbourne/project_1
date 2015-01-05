@@ -1,28 +1,43 @@
-<nav>
-  <ul>
-    <li>
-      <%= link_to 'Genre', genres_path %>
+
+
+<nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">FEEDBACK</a></h1>
     </li>
-    <li>
-      <%= link_to 'Add New Genre', new_genre_path %>
-    </li>
-    <li>
-      <%= link_to 'Songs', songs_path %>
-    </li>
-    <li>
-      <%= link_to 'Add New Song', new_song_path %>
-    </li>
-    <li>
-      <%= link_to 'Artists', users_path %>
-    </li>
-    <li>
-      <%= link_to 'Add New Artist', new_user_path %>
-    </li>
-    <li>
-      <%= link_to 'Comments', comments_path %>
-    </li>
-    <li>
-      <%= link_to 'Add New Comment', new_comment_path %>
-    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
   </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li><%= link_to 'Home', root_path %></li>
+      <% if current_user %>
+        <li><%= link_to current_user.email, user_path(current_user) %></li>
+        <li><%= link_to "Edit Profile", edit_user_registration_path  %></li>
+        <li><%= link_to "Logout", destroy_user_session_path, :method => :delete  %></li>
+      <% else %>
+        <li><%= link_to "Register", new_user_registration_path %></pre></li>
+        <li><%= link_to "Login", new_user_session_path %></li>
+      <% end %>
+      <li class="has-dropdown">
+
+        <a href="#">Links</a>
+        <ul class="dropdown">
+          <li><%= link_to 'Splash', splash_index_path %></li>
+          <li><%= link_to 'Genres', genres_path %></li>
+          <li><%= link_to 'Add New Genre', new_genre_path if can? :create, Genre %></li>
+          <li><%= link_to 'Albums', albums_path %></li>
+          <li><%= link_to 'Add New Album', new_album_path if can? :create, Album %></li>
+          <li><%= link_to 'Songs', songs_path %></li>
+          <li><%= link_to 'Add New Song', new_song_path if can? :create, Song%></li>
+          <li><%= link_to 'Artists', users_path %></li>
+          <li><%#= link_to 'Add New Artist', new_user_registration_path if can? :create, User %></li>
+        <!-- <li class="active"><a href="#">Active link in dropdown</a></li> -->
+        </ul>
+      </li>
+    </ul>
+
+ 
 </nav>
