@@ -17,8 +17,8 @@
 
  */
 body {
-background-image: url("home background.jpg");
-background-size: cover;
+
+background: black;
 }
 
 p {
@@ -89,8 +89,8 @@ background-size: cover;
      color: white;
  }
 
-.button {
-display: center;
+/*.button {
+display: center;*/
 
 }
 

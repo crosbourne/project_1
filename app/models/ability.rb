@@ -13,21 +13,18 @@ class Ability
         can :manage, :all
 
       elsif user.role? :user
-        can :read, Genre 
+        can :read, :all
         cannot :create, Genre
         cannot :edit, Genre
-        can :read, Album 
         can :create, Album
-        can :edit, Album,:user_id == user.id
-        can :destroy, Album, :user_id == user.id
-        can :read, Song 
+        can :edit, Album, user_id: user.id
+        can :destroy, Album, user_id: user.id 
         can :create, Song
-        can :edit, Song,:user_id == user.id
-        can :destroy, Song, :user_id == user.id
-        can :read, Comment
+        can :edit, Song, user_id: user.id
+        can :destroy, Song, user_id: user.id
         can :create, Comment 
-        can :edit, Comment, :user_id == user.id
-        can :destroy, Comment, :user_id == user.id 
+        can :edit, Comment, user_id: user.id
+        can :destroy, Comment, user_id: user.id 
         # cannot comment on own page
       else 
         # guest

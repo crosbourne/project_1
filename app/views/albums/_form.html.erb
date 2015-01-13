@@ -20,13 +20,9 @@
   <%= f.file_field :album_image %>
 </div>
 
-<div class="field">
- <%#= f.collection_select(:song_id, Song.all, :id, :name) %><br>
- <div class="actions">
-  <%#= f.submit %>
-</div>
+
 <% Song.all.each do |song| %>
-<%= check_box_tag "song[song_ids][]", song.id, @album.songs.include?(song), id: "album_ids_#{song.id}" %>
+<%= check_box_tag "album[song_ids][]", song.id, @album.songs.include?(song), id: "album_ids_#{song.id}" %>
 <%= f.label :song_ids, song.name, for: "album_ids_#{song.id}" %>
 <% end %><br>
 

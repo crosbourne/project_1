@@ -10,8 +10,8 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable 
-             mount_uploader :user_avatar, UserAvatarUploader
-             mount_uploader :user_background, UserBackgroundUploader
+  mount_uploader :user_avatar, UserAvatarUploader
+  mount_uploader :user_background, UserBackgroundUploader
 
   before_create :set_default_user_role
 
