@@ -1,0 +1,36 @@
+<h1>SPLASH</h1>
+
+<nav>
+  <div class="row">
+    <div class="large-12 columns">
+      <ul class="large-block-grid-2">
+
+        <li class="block-grid-item">
+
+       
+
+          <div class="content"><%= link_to 'HOME', home_path %></div>
+          <%= link_to image_tag("home.jpg"), home_path %>
+        </li>
+        <li class="block-grid-item">
+          <div class="content"><%= link_to 'MUSIC', search_path %></div>
+          <%= link_to image_tag("music.jpg"), search_path %>
+        </li>
+        <li class="block-grid-item">
+          <% if user_signed_in? %>
+            <div class="content"><%= link_to 'MY MUSIC', user_path(current_user) %></div>
+            <%= link_to image_tag("my music.jpg"), user_path(current_user) %>
+          <% else %>
+            <img src="assets/my_music_off.jpg" >
+          <% end %>
+        </li>
+        <li class="block-grid-item">
+          <div class="content"><%= link_to 'ABOUT US', about_path %></div>
+          <%= link_to image_tag("about us.jpg"), about_path %>
+        </li>
+      </ul>
+    </div>
+  </div>  
+</nav>
+
+

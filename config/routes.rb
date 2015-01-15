@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  root 'home#index'
+ get '/home' => 'pages#home'
+ get '/about' => 'pages#about'
+ get '/splash' => 'pages#splash'
+ get '/search' => 'pages#search'
+ get '/about' => 'pages#about'
+        
 
   devise_for :users
   resources :users, only: [:show, :index, :destroy] 
@@ -11,10 +16,7 @@ Rails.application.routes.draw do
     resources :comments
   end
   
-  resources :splash
-  resources :about
-  resources :search
-
+ 
 
 
 end
