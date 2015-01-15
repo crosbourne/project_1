@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <%= @album.name %>
-  <%#= @user.name %>
+  <%= @album.name %><br>
+  Created by:
+  <%= @album.user.try :name %>
 </p>
 
 <p>

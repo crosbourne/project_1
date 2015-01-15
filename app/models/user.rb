@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
   has_many :songs
   has_many :comments
-
   has_many :albums
   #has_many :songs, through: :albums
   accepts_nested_attributes_for :albums, allow_destroy: :false
