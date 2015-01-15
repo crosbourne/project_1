@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <%= @album.name %>
+  <%#= @user.name %>
+</p>
+
+<p>
   <%= link_to image_tag(@album.album_image.thumb.url), @album.album_image.detail.url %>
 </p>
 
@@ -15,3 +20,4 @@
 
 <%= link_to 'Edit', edit_album_path(@album) if can? :edit, @album %> |
 <%= link_to 'Back', albums_path %>
+
