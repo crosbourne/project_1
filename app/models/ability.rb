@@ -18,12 +18,15 @@ class Ability
         cannot :edit, Genre
         can :create, Album
         can :edit, Album, user_id: user.id
+        can :update, Album, user_id: user.id 
         can :destroy, Album, user_id: user.id 
         can :create, Song
         can :edit, Song, user_id: user.id
+        can :update, Song, user_id: user.id
         can :destroy, Song, user_id: user.id
         can :create, Comment 
         can :edit, Comment, user_id: user.id
+        can :update, Comment, user_id: user.id
         can :destroy, Comment, user_id: user.id 
         # cannot comment on own page
       else 
