@@ -71,13 +71,13 @@ Song.create!([
 
   {name: "New Sensation", rating: nil, user_id: 6, genre_id: 2, description: nil, song_image: nil, remote_song_image_url: "http://imageshack.com/a/img538/1600/guka1U.jpg", song_upload: "08_New_Sensation.mp3", album_id: nil},
 
-  {name: "Paradise City", rating: nil, user_id: 6, genre_id: 2, description: nil, song_image: nil, remote_song_image_url: "http://imageshack.com/a/img661/6011/KpLiuc.jpg", song_upload: "01_Welcome_To_The_Jungle.m4a", album_id: 2},
+  {name: "Paradise City", rating: nil, user_id: 6, genre_id: 2, description: nil, song_image: nil, remote_song_image_url: "http://imageshack.com/a/img661/6011/KpLiuc.jpg", song_upload: "04_Paradise_City.m4a", album_id: 2},
 
   {name: "Hysteria", rating: nil, user_id: 6, genre_id: 2, description: nil, song_image: nil, remote_song_image_url: "http://imageshack.com/a/img538/6127/WQr7mi.jpg", song_upload: "02_Sweet_Child_O__Mine.m4a", album_id: 2},
 
-  {name: "You Could be Mine", rating: nil, user_id: 6, genre_id: 2, description: nil, song_image: nil, remote_song_image_url: "http://imageshack.com/a/img903/7814/TYZP0X.jpg", song_upload: "04_Paradise_City.m4a", album_id: 2},
+  {name: "You Could be Mine", rating: nil, user_id: 6, genre_id: 2, description: nil, song_image: nil, remote_song_image_url: "http://imageshack.com/a/img903/7814/TYZP0X.jpg", song_upload: "07_You_Could_Be_Mine.m4a", album_id: 2},
 
-  {name: "Dark Side of the Moon", rating: nil, user_id: 6, genre_id: 2, description: nil, song_image: nil, remote_song_image_url: "http://imageshack.com/a/img908/4065/HIRVkx.jpg", song_upload: "07_You_Could_Be_Mine.m4a", album_id: nil},
+  {name: "Dark Side of the Moon", rating: nil, user_id: 6, genre_id: 2, description: nil, song_image: nil, remote_song_image_url: "http://imageshack.com/a/img908/4065/HIRVkx.jpg", song_upload: "01 Welcome To The Jungle.m4a", album_id: nil},
 
   {name: "Made you Look", rating: nil, user_id: 5, genre_id: 5, description: nil, song_image: nil, remote_song_image_url: "http://imageshack.com/a/img538/5016/bnMewk.jpg", song_upload: "01_Made_You_Look__Explicit_Version_.m4a", album_id: nil},
 
