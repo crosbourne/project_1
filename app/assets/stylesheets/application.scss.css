@@ -16,9 +16,9 @@
  *= require foundation_and_overrides
 
  */
-body {
+ body {
 
-background: black;
+  background: black;
 }
 
 p {
@@ -31,7 +31,7 @@ p {
 }
 
 .user_background {
-background-size: cover;
+  background-size: cover;
 }
 
 .block-grid-item {
@@ -52,45 +52,42 @@ background-size: cover;
 
 .block-grid-item .content a {
  color: white;
-  }
+}
 
-  .block-grid-item:hover .content {
+.block-grid-item:hover .content {
   opacity: 1;
   
-  }
-
-  .block-grid-item .user_content {
-   position: absolute;
-   opacity: 0;
-   transition:1s;
-   top:60%;
-   font-family: verdana, arial, helvetica, sans-serif;
-   font-size: 30px;
-   color: white;
-  }
-
-
-  .block-grid-item .user_content a {
-   color: white;
-    }
-
-    .block-grid-item:hover .user_content {
-    opacity: 1;
-    
-    }
-
- .top-bar {
-     background: black;
-     color: white;
- }
-
- .top-bar-section  {
-     background: black;
-     color: white;
- }
-
-/*.button {
-display: center;*/
-
 }
+
+.block-grid-item .user_content {
+ position: absolute;
+ opacity: 0;
+ transition:1s;
+ top:60%;
+ font-family: verdana, arial, helvetica, sans-serif;
+ font-size: 30px;
+ color: white;
+}
+
+
+.block-grid-item .user_content a {
+ color: white;
+}
+
+.block-grid-item:hover .user_content {
+  opacity: 1;
+  
+}
+
+.top-bar {
+ background: black;
+ color: white;
+}
+
+.top-bar-section  {
+ background: black;
+ color: white;
+}
+
+
 
