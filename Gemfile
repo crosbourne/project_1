@@ -5,6 +5,8 @@ gem 'cancancan'
 gem 'carrierwave', '0.9.0'
 gem 'rmagick'
 gem 'fog', '~> 1.3.1'
+gem 'rmagick'
+gem 'rails_12factor', group: :production
 gem 'acts_as_commentable'
 gem 'foundation-rails'
 gem 'pry-rails'
@@ -44,4 +46,13 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+group :development, :test do
+  gem "quiet_assets"
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-stack_explorer'
+  gem 'binding_of_caller'
+  gem 'better_errors'
+  gem 'seed_dump'
+end
 

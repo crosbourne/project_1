@@ -36,8 +36,14 @@
       <%= f.file_field :user_avatar %>
     </div>
     <div class="field">
+      <%= f.text_field :remote_user_avatar_url, placeholder: "Web URL for Avatar Picture" %>
+    </div>
+    <div class="field">
       <%= f.label :user_background %><br>
       <%= f.file_field :user_background %>
+    </div>
+    <div class="field">
+      <%= f.text_field :remote_user_background_url, placeholder: "Web URL for Background Picture" %>
     </div>
     <div class="field">
       <%= f.label :description %><br>

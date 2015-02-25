@@ -19,6 +19,9 @@
   <%= f.label :album_image %><br />
   <%= f.file_field :album_image %>
 </div>
+<div class="field">
+  <%= f.text_field :remote_album_image_url, placeholder: "Web URL for Album Cover" %>
+</div>
 
 
 <% Song.all.each do |song| %>

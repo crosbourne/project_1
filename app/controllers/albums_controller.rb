@@ -77,6 +77,7 @@ class AlbumsController < ApplicationController
         :name, 
         {:song_ids => []},  
         :album_image, 
+        :remote_album_image_url,
         :song_id, 
         :user_id
         )

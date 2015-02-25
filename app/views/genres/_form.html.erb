@@ -16,14 +16,12 @@
     <%= f.text_field :name %>
   </div>
 
-
-  <div class="field">
-      <%= f.label :remote_genre_image_url %><br />
-      <%= f.text_field :remote_genre_image_url %>
-  </div>
   <div class="field">
   <%= f.label :genre_image %><br />
   <%= f.file_field :genre_image %>
+  </div>
+  <div class="field">
+      <%= f.text_field :remote_genre_image_url, placeholder: "Web URL for Genre Cover" %>
   </div>
   <div class="actions">
     <%= f.submit %>
