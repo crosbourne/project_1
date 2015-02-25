@@ -49,7 +49,7 @@ Genre.create!([
 ])
 
 Song.create!([
-  {name: "Billy Jean", rating: nil, user_id: 1, genre_id: 3, description: nil, song_image: nil, remote_song_image_url: "http://imageshack.com/a/img901/9396/k6FoEO.jpg", song_upload: "06_Billie_Jean.m4a", album_id: 4},
+  {name: "Billy Jean", rating: nil, user_id: 1, genre_id: 3, description: nil, song_image: nil, remote_song_image_url: "http://imageshack.com/a/img901/9396/k6FoEO.jpg", song_upload: nil, remote_song_upload_url: "", album_id: 4},
 
   {name: "Like a Virgin", rating: nil, user_id: 1, genre_id: 3, description: nil, song_image: nil, remote_song_image_url: "http://imageshack.com/a/img631/6262/pL6Mvx.jpg", song_upload: "04_Like_A_Virgin.m4a", album_id: nil},
 
