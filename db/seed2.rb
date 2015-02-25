@@ -15,7 +15,7 @@ admin = User.create!([
   {email: "admin@hotmail.com", password: "password", description: "", name: "admin", role: "admin", id: 3, user_avatar: nil, remote_user_avatar_url: "http://imageshack.com/a/img540/511/t3VygJ.jpg", user_background: nil} ])
 
 fred = User.create!([
-  {email: "fred@hotmail.com", password: "password", description: "Your move, creep!", name: "Fred", role: "user", id: 4, user_avatar: nil, remote_user_avatar_url: "http://imageshack.com/a/img538/6076/7L7cXe.jpg", user_background: nil, remote_user_background_url: "http://imageshack.com/a/img661/1743/lP0kZg.jpg"} ])
+  {email: "fred@hotmail.com", password: "password", description: "Your move, creep!", name: "Fred", role: "user", id: 4, user_avatar: nil, remote_user_avatar_url: "http://imageshack.com/a/img538/6076/7L7cXe.jpg", user_background: nil, remote_user_background_url: "hhttp://imageshack.com/a/img661/1743/lP0kZg.jpg"} ])
 
 tony = User.create!([
   {email: "tony@hotmail.com", password: "password", description: "Hulk Smash!", name: "Tony", role: "user", id: 5, user_avatar: nil, remote_user_avatar_url: "http://imageshack.com/a/img540/589/Nnuswl.jpg", user_background: nil, remote_user_background_url: "http://imageshack.com/a/img911/2111/wHWCeB.jpg"} ])
@@ -109,4 +109,3 @@ Song.create!([
 
   {name: "Bach", rating: nil, user_id: 3, genre_id: 7, description: nil, song_image: nil, remote_song_image_url: "http://imageshack.com/a/img631/5060/81Vo89.jpg", song_upload: "Star_Wars_-_Main_Title.mp3", album_id: nil}
 ])
-
